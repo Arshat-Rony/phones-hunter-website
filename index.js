@@ -58,8 +58,8 @@ const display_data = (phones) => {
             <div class="card p-4 rounded-3 col-12 col-md-4" style="width: 20rem;">
                   <img src="${phone.image}" class="card-img-top" alt="...">
                   <div class="card-body">
-                      <h5 class="card-title">${phone.brand}</h5>
-                      <h6 class="">${phone.phone_name}</h6>
+                      <h5 class="card-title ">${phone.brand}</h5>
+                      <h6 class="text-dark">${phone.phone_name}</h6>
                       <p class="card-text">Our Product Our Guranty</p>
                       <a href="#" class="btn btn-primary detail-btn" onclick="view_Phone('${phone.slug}')">See Dertails</a>
                   </div>
@@ -101,7 +101,7 @@ function view_Phone(phone) {
 function showPhone(phone) {
     console.log(phone)
     viewedPhone.innerHTML = `
-<div class="card mb-3 mt-3 p-4" style="max-width:1400px;">
+<div class="card my-card mb-3 mt-3 p-4" style="max-width:1400px;">
     <div  class = "row g-2">
         <div class ="col-12 col-md-4">
                 <img  src="${phone.image}" class="card-img-top mx-auto" style="max-width:500px;" alt="...">      
