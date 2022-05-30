@@ -10,11 +10,13 @@ spinner.style.display = "none"
 
 const loadData = (input) => {
 
-    fetch(`https://openapi.programming-hero.com/api/phones?search=${input}`)
+    fetch(`https://openapi.programming-hero.com/api/phones?search=${input || ""}`)
         .then(res => res.json())
         .then(data => display_data(data.data))
 
 }
+
+loadData("samsung")
 
 function displayExtraData(phones) {
     const newPhone = phones.slice(21, phones.length)
@@ -111,7 +113,7 @@ function showPhone(phone) {
                 <div class="col-12">
                     <h5 class="card-title fs-1 fw-bold text-center">${phone.brand}</h5>
                     <h6 class="text-center">${phone.name}</h6>
-                    <h6 class="text-danger fs-3 fw-bold text-center">${phone.releaseDate? phone.releaseDate : "No realese date"}</h6>
+                    <h6 class="text-danger fs-3 fw-bold text-center">${phone.releaseDate ? phone.releaseDate : "No realese date"}</h6>
                 </div>
 
                 <div class="col-12 col-lg-6 mt-4">
